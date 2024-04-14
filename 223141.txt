@@ -1,0 +1,44 @@
+1.mkdir SI_2024_lab1_223141
+2.cd SI_2024_lab1_223141
+3.git init
+4.git remote add origin https://github.com/Elenaa13/SI_2024_lab1_223141.git
+5.nano README.md
+6.git add README.md
+7.git commit -m "Initial commit"
+8.git add SILab1Main.java SILab1_1.java SILab1_2.java
+9.git commit -m "Add starter code"
+10.git push origin master
+11.git branch bug1
+12.git branch bug2
+13.git checkout bug1
+14.nano SILab1_1.java
+15.git add SILab1_1.java
+16.git commit -m "Fix wrong condition in filterOddLengthStrings"
+17.git checkout bug2
+18.nano SILab1_2.java
+19.git add SILab1_2.java
+20.git commit -m "Fix wrong condition in makeBigStringFrom"
+21.git checkout bug1
+22.nano SILab1Main.java
+23.git add SILab1Main.java
+24.git commit -m "Call method filterOddLengthStrings in main class"
+25.git checkout bug2
+26.nano SILab1Main.java
+27.git add SILab1Main.java
+28.git commit -m "Call method makeBigStringFrom in main class"
+29.git push origin bug1 bug2
+30.git checkout master
+31.git merge bug1
+32.git push origin master bug1 bug2
+33.git checkout bug2
+34.git rebase master (tuka se pojavuva konflikt)
+35.nano SILab1Main.java (go resavam konfliktot so brisenje na <<< HEAD === >>>, :wq za izleguvanje od fajlot)
+36.git add SILab1Main.java
+37.git rebase --continue
+38.git checkout master
+39.git merge bug2
+40.git push origin master bug2 (tuka se pojavuva konflikt)
+41.nano SILab1Main.java (go resavam konfliktot so brisenje na <<< HEAD === >>>, :wq za izleguvanje od fajlot)
+41.git add SILab1Main.java
+42.git merge --continue
+43.git push origin bug2
